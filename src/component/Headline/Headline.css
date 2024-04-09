@@ -1,0 +1,16 @@
+.logo-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 5vw;
+}
+
+.headline {
+  position: relative;
+}
+
+.back-arrow {
+  position: fixed;
+  left: 30px;
+  top: 20px;
+}

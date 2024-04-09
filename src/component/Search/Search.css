@@ -1,0 +1,23 @@
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.search input {
+  border-radius: 50px;
+  background-color: var(--input);
+  border-style: none;
+  padding: 10px 10vw;
+}
+.search input::placeholder {
+  color: var(--placeholder);
+  font-size: 14px;
+  font-family: roboto;
+}
+
+.search input:focus {
+  outline: none;
+}

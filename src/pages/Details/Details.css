@@ -1,0 +1,107 @@
+.details-page {
+  padding-inline: 5vw;
+  padding-top: 50px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Background-Farbverlauf */
+.details-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 225, 198, 1) 0%,
+    rgba(255, 203, 5, 1) 35%
+  );
+  margin-top: 150px;
+  padding: 0 45vw;
+  border-radius: 20px;
+  padding-top: -20px;
+  height: 100px;
+  position: relative;
+
+  margin-bottom: 50px;
+}
+
+/* Animation für Pokemon-Bild */
+@keyframes slide-in-blurred-top {
+  0% {
+    transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+    transform-origin: 50% 0%;
+    filter: blur(90px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Pokemon-Bild */
+.details-img {
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+
+  max-width: 350px;
+
+  animation: slide-in-blurred-top 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Pokemon-Name */
+.details h2 {
+  font-family: RobotoBold;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2c72b8;
+  -webkit-text-fill-color: #ffcd05;
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
+}
+
+/* Pokemon-Types */
+.details-type {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.types {
+  padding: 10px 10vw;
+  color: white;
+  border-radius: 7px;
+  text-transform: uppercase;
+  font-family: roboto;
+}
+
+/* Pokemon-Movements */
+.details-attacks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  margin-bottom: 50px;
+}
+
+.details-attacks p {
+  padding: 10px 10vw;
+  border-radius: 7px;
+  text-transform: uppercase;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: unset;
+}
